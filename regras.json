@@ -1,0 +1,22 @@
+{
+  "regras": [
+    {
+      "id": 1,
+      "descricao": "Risco de Incêndio",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 35 },
+        "humidity_percent": { "operador": "<", "valor": 25 },
+        "wind_speed_kmh": { "operador": ">", "valor": 30 }
+      },
+      "alerta": "risco_incendio_alto"
+    },
+    {
+      "id": 2,
+      "descricao": "Alerta de Qualidade do Ar (PM10)",
+      "condicoes": {
+        "PM10": { "operador": ">", "valor": 50 }
+      },
+      "alerta": "alerta_respiratorio"
+    }
+  ]
+}
