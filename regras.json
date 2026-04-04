@@ -2,21 +2,104 @@
   "regras": [
     {
       "id": 1,
-      "descricao": "Risco de Incêndio",
+      "descricao": "Condições seguras",
       "condicoes": {
-        "temperature_c": { "operador": ">", "valor": 35 },
-        "humidity_percent": { "operador": "<", "valor": 25 },
-        "wind_speed_kmh": { "operador": ">", "valor": 30 }
+        "temperature_c": { "operador": "<=", "valor": 25 },
+        "humidity_percent": { "operador": ">", "valor": 50 },
+        "wind_speed_kmh": { "operador": "<", "valor": 20 }
+      },
+      "alerta": "condicoes_seguras"
+    },
+    {
+      "id": 2,
+      "descricao": "Risco de incêndio extremo",
+      "condicoes": {
+        "temperature_c": { "operador": ">=", "valor": 32 },
+        "humidity_percent": { "operador": "<=", "valor": 20 },
+        "wind_speed_kmh": { "operador": ">=", "valor": 25 }
+      },
+      "alerta": "risco_incendio_extremo"
+    },
+    {
+      "id": 3,
+      "descricao": "Risco de incêndio alto",
+      "condicoes": {
+        "temperature_c": { "operador": ">=", "valor": 28 },
+        "humidity_percent": { "operador": "<=", "valor": 30 },
+        "wind_speed_kmh": { "operador": ">=", "valor": 20 }
       },
       "alerta": "risco_incendio_alto"
     },
     {
-      "id": 2,
-      "descricao": "Alerta de Qualidade do Ar (PM10)",
+      "id": 4,
+      "descricao": "Risco de incêndio moderado",
       "condicoes": {
-        "PM10": { "operador": ">", "valor": 50 }
+        "temperature_c": { "operador": ">=", "valor": 25 },
+        "humidity_percent": { "operador": "<=", "valor": 50 }
       },
-      "alerta": "alerta_respiratorio"
+      "alerta": "risco_incendio_moderado"
+    },
+    {
+      "id": 5,
+      "descricao": "Baixo risco de incêndio",
+      "condicoes": {
+        "humidity_percent": { "operador": ">", "valor": 70 }
+      },
+      "alerta": "risco_incendio_baixo"
+    },
+    {
+      "id": 6,
+      "descricao": "Condições de propagação rápida de incêndio",
+      "condicoes": {
+        "wind_speed_kmh": { "operador": ">", "valor": 20 }
+      },
+      "alerta": "propagacao_rapida"
+    },
+    {
+      "id": 7,
+      "descricao": "Alerta de calor extremo",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 40 }
+      },
+      "alerta": "alerta_calor_extremo"
+    },
+    {
+      "id": 8,
+      "descricao": "Proibição absoluta de queimadas",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 25 },
+        "humidity_percent": { "operador": "<", "valor": 25 },
+        "wind_speed_kmh": { "operador": ">", "valor": 20 }
+      },
+      "alerta": "proibicao_queimadas"
+    },
+    {
+      "id": 9,
+      "descricao": "Tempo Seco Favorável para Incêndio",
+      "condicoes": {
+      "humidity_percent": { "operador": "<", "valor": 20 },
+      "wind_speed_kmh": { "operador": ">", "valor": 20 }
+      },
+      "alerta": "condicoes_criticas_vento_seco"
+    },
+    {
+      "id": 10,
+      "descricao": "Alerta de desidratação extrema",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 38 },
+        "humidity_percent": { "operador": "<", "valor": 15 }
+      },
+      "alerta": "alerta_desidratacao_extrema"
+    },
+    {
+      "id": 11,
+      "descricao": "Tempestade Seca",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 28 },
+        "humidity_percent": { "operador": "<", "valor": 30 },
+        "wind_speed_kmh": { "operador": ">", "valor": 25 }
+      },
+      "alerta": "alerta_tempestade_seca"
     }
   ]
 }

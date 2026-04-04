@@ -1,8 +1,0 @@
-Se a temperatura for maior que 35 ºC, a humidade menor que 25% e o vento superior a 30 km/h, o risco de incêndio é elevado.
-Se temperature_c > 35 ^ humidity_percent < 25 ^ wind_speed_kmh > 30 → risco_incendio_alto
-
-Se os níveis de partículas PM10 ultrapassarem os 50, emitir um alerta respiratório.
-Se PM10 > 50 → alerta_respiratorio
-
-Se a precipitação for superior a 15 mm, alertar para o risco de cheias rápidas na via pública.
-Se precipitation_mm > 15 → risco_inundacao
