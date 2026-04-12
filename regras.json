@@ -100,6 +100,12 @@
         "wind_speed_kmh": { "operador": ">", "valor": 25 }
       },
       "alerta": "alerta_tempestade_seca"
+    },
+    {
+      "id": 99,
+      "descricao": "Condições gerais (fallback, totalmente coberto)",
+      "condicoes": {},
+      "alerta": "condicao_normal"
     }
   ]
 }

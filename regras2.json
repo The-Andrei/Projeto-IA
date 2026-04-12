@@ -1,0 +1,136 @@
+{
+  "regras": [
+
+    {
+      "id": 1,
+      "descricao": "Baixo risco (muito húmido)",
+      "condicoes": {
+        "humidity_percent": { "operador": ">", "valor": 70 }
+      },
+      "alerta": "risco_incendio_baixo"
+    },
+
+    {
+      "id": 2,
+      "descricao": "Condições seguras",
+      "condicoes": {
+        "temperature_c": { "operador": "<=", "valor": 25 },
+        "humidity_percent": { "operador": ">", "valor": 50 },
+        "wind_speed_kmh": { "operador": "<=", "valor": 20 }
+      },
+      "alerta": "condicoes_seguras"
+    },
+    {
+      "id": 3,
+      "descricao": "Condições quentes e húmidas (quente e húmido)",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 25 },
+        "humidity_percent": { "operador": "<=", "valor": 70 },
+        "wind_speed_kmh": { "operador": "<=", "valor": 20 }
+      },
+      "alerta": "condicoes_quente_humido"
+    },
+    {
+      "id": 4,
+      "descricao": "Risco moderado (temperatura média, humidade média)",
+      "condicoes": {
+        "temperature_c": { "operador": "<=", "valor": 28 },
+        "humidity_percent": { "operador": "<=", "valor": 50 }
+      },
+      "alerta": "risco_incendio_moderado"
+    },
+
+    {
+      "id": 5,
+      "descricao": "Risco moderado médio alto (quente e humidade média)",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 28 },
+        "humidity_percent": { "operador": "<=", "valor": 50 },
+        "wind_speed_kmh": { "operador": "<=", "valor": 20 }
+      },
+      "alerta": "risco_incendio_medio_alto"
+    },
+
+    {
+      "id": 6,
+      "descricao": "Risco elevado (seco e quente)",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 28 },
+        "humidity_percent": { "operador": "<=", "valor": 30 },
+        "wind_speed_kmh": { "operador": "<=", "valor": 25 }
+      },
+      "alerta": "risco_incendio_alto"
+    },
+
+    {
+      "id": 7,
+      "descricao": "Risco extremo (muito quente, seco e vento)",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 32 },
+        "humidity_percent": { "operador": "<=", "valor": 20 },
+        "wind_speed_kmh": { "operador": ">", "valor": 25 }
+      },
+      "alerta": "risco_incendio_extremo"
+    },
+
+    {
+      "id": 8,
+      "descricao": "Propagação rápida (vento elevado)",
+      "condicoes": {
+        "wind_speed_kmh": { "operador": ">", "valor": 20 }
+      },
+      "alerta": "propagacao_rapida"
+    },
+
+    {
+      "id": 9,
+      "descricao": "Tempo seco perigoso",
+      "condicoes": {
+        "humidity_percent": { "operador": "<=", "valor": 20 },
+        "wind_speed_kmh": { "operador": ">", "valor": 20 }
+      },
+      "alerta": "condicoes_criticas_vento_seco"
+    },
+
+    {
+      "id": 10,
+      "descricao": "Proibição de queimadas",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 25 },
+        "humidity_percent": { "operador": "<", "valor": 25 },
+        "wind_speed_kmh": { "operador": ">", "valor": 20 }
+      },
+      "alerta": "proibicao_queimadas"
+    },
+
+    {
+      "id": 11,
+      "descricao": "Tempestade seca",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 28 },
+        "humidity_percent": { "operador": "<=", "valor": 30 },
+        "wind_speed_kmh": { "operador": ">", "valor": 25 }
+      },
+      "alerta": "alerta_tempestade_seca"
+    },
+
+    {
+      "id": 12,
+      "descricao": "Calor extremo",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 40 }
+      },
+      "alerta": "alerta_calor_extremo"
+    },
+
+    {
+      "id": 13,
+      "descricao": "Desidratação extrema",
+      "condicoes": {
+        "temperature_c": { "operador": ">", "valor": 38 },
+        "humidity_percent": { "operador": "<=", "valor": 15 }
+      },
+      "alerta": "alerta_desidratacao_extrema"
+    }
+  ]
+}
