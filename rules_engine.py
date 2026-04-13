@@ -7,7 +7,7 @@ from sklearn.metrics import classification_report, accuracy_score
 # ─────────────────────────────────────────────
 # 1. Carregar regras do JSON
 # ─────────────────────────────────────────────
-def load_rules(path="regras2.json"):
+def load_rules(path="regras_Final.json"):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)["regras"]
 
@@ -103,7 +103,7 @@ def main():
     df = df.drop(columns=["C6H6", "NMHC", "NOx"], errors="ignore")
 
     # ── Load rules ──
-    regras = load_rules("regras2.json")
+    regras = load_rules("regras_Final.json")
 
     # ── Apply rules ──
     df = aplicar_regras(df, regras)
