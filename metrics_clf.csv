@@ -1,0 +1,3 @@
+Model,Task,Target,Accuracy_R2,Precision_MAE,Recall_RMSE,F1_Score
+Logistic_Regression,Classification,air_quality_good,0.9057567316620242,0.8803418803418803,0.9005464480874317,0.8903295515937332
+Random_Forest_Clf,Classification,air_quality_good,0.9921077065923862,0.9966814159292036,0.9846994535519126,0.9906542056074766
